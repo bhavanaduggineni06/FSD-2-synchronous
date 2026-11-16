@@ -1,0 +1,14 @@
+import fs from 'fs';
+const data = "hello";
+fs.writeFileSync("s.txt", data, "utf-8");
+console.log(1);
+const rd = fs.readFileSync("s.txt", "utf-8");
+console.log(rd);
+const appenddata = "\nThis is added";
+fs.appendFileSync("s.txt", appenddata, "utf-8");
+const readAppendData = fs.readFileSync("s.txt", "utf-8");
+console.log(readAppendData);
+console.log(3);
+fs.renameSync("s.txt", "new.txt");
+// fs.unlinkSync("new.txt");
+console.log("File renamed.");
